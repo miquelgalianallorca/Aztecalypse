@@ -35,6 +35,7 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
+	${OBJECTDIR}/SFML.o \
 	${OBJECTDIR}/main.o
 
 
@@ -61,6 +62,11 @@ LDLIBSOPTIONS=-L../../../../../SFML-2.1/lib -lsfml-graphics-d -lsfml-window-d -l
 ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/entregable.exe: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/entregable ${OBJECTFILES} ${LDLIBSOPTIONS}
+
+${OBJECTDIR}/SFML.o: SFML.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -I../../../../../SFML-2.1/include -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/SFML.o SFML.cpp
 
 ${OBJECTDIR}/main.o: main.cpp 
 	${MKDIR} -p ${OBJECTDIR}

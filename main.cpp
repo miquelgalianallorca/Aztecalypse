@@ -3,6 +3,7 @@
 #include <iostream>
 #include <sstream>
 #include <string>
+#include "SFML.h"
 #define kUpdateTimePS 1/15 //15 veces por segundo de la IA
 #define kVel 120 //pixeles/segundo
 using namespace std;
@@ -46,7 +47,7 @@ int getInput(sf::RenderWindow &window, sf::Event &event, sf::View &view){
     //Eventos
     while(window.pollEvent(event)){
         switch(event.type){
-            case sf::Event::Closed:
+           case sf::Event::Closed:
                 window.close();
                 break;
             break;
@@ -56,8 +57,18 @@ int getInput(sf::RenderWindow &window, sf::Event &event, sf::View &view){
     return input;
 }
 
+void render(sf::RenderWindow &window, sf::View &view, sf::Sprite &fondo){
+    window.clear();
+    window.setView(view);
+    //Dibujar objetos
+    window.draw(fondo);
+    //---------------
+    window.display();
+}
+
 int main(int argc, char** argv) {
-    sf::RenderWindow window(sf::VideoMode(400, 400), "Entregable - Scrolling", sf::Style::Titlebar | sf::Style::Close);
+    sf::RenderWindow window(sf::VideoMode(800, 600), "Entregable - Scrolling", sf::Style::Titlebar | sf::Style::Close);
+    //Window win = new Window();
     //Texturas
     sf::Texture texFondo;
     if(!texFondo.loadFromFile("resources/map.png")){
@@ -69,7 +80,7 @@ int main(int argc, char** argv) {
     //View
     sf::View view;
     view.setCenter(sf::Vector2f(350, 300));
-    view.setSize(sf::Vector2f(200, 200));
+    view.setSize(sf::Vector2f(400, 300)); //Tamano de la window entre 2
     //Fisicas
     sf::Clock clock;
     
@@ -84,10 +95,7 @@ int main(int argc, char** argv) {
             clock.restart();
         }
         //Render
-        window.clear();
-        window.setView(view);
-        window.draw(fondo);
-        window.display();
+        render(window, view, fondo);
     }
     return 0;
 }
