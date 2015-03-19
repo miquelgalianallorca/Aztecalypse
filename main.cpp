@@ -1,5 +1,4 @@
 #include <cstdlib>
-#include <SFML/Graphics.hpp>
 #include <iostream>
 #include <sstream>
 #include <string>
@@ -14,89 +13,79 @@ std::string ItoS(int num){
     return oss.str();
 }
 
-void updateGameState(int input, float elapsedTimeSinceLastCall, sf::View &view){    
+void updateGameState(int input, float elapsedTimeSinceLastCall, View *view){    
     switch(input){
     case 1:
-        view.move(elapsedTimeSinceLastCall*kVel, 0);
+        view->move(elapsedTimeSinceLastCall*kVel, 0);
         break;
     case 2:
-        view.move(-elapsedTimeSinceLastCall*kVel, 0);
+        view->move(-elapsedTimeSinceLastCall*kVel, 0);
         break;
     case 3:
-        view.move(0, elapsedTimeSinceLastCall*kVel);
+        view->move(0, elapsedTimeSinceLastCall*kVel);
         break;
     case 4:
-        view.move(0, -elapsedTimeSinceLastCall*kVel);
+        view->move(0, -elapsedTimeSinceLastCall*kVel);
         break;
     }
 }
 
-int getInput(sf::RenderWindow &window, sf::Event &event, sf::View &view){
-    int input = 0;
+int getInput(Window *window, View *view){
     //Scroll - Teclas
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left)) input = 2;
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right)) input = 1;
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up)) input = 4;
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down)) input = 3;
+    Keyboard* keyboard = new Keyboard();
+    int input = keyboard->getDireccion();
     //Scroll - Raton
-    sf::Vector2i localPosition = sf::Mouse::getPosition(window);
-    if(localPosition.x < 25) input = 2;
-    if(localPosition.x > (2*view.getSize().x) - 25) input = 1;
-    if(localPosition.y < 25) input = 4;
-    if(localPosition.y > (2*view.getSize().y) - 25) input = 3;
+    Mouse* mouse = new Mouse();
+    mouse->getPosition(window);
+    int posX = mouse->getX();
+    int posY = mouse->getY();
+    if(posX < 25) input = 2;
+    if(posX > (2*view->getSizeX()) - 25) input = 1;
+    if(posY < 25) input = 4;
+    if(posY > (2*view->getSizeY()) - 25) input = 3;
     //Eventos
-    while(window.pollEvent(event)){
-        switch(event.type){
-           case sf::Event::Closed:
-                window.close();
-                break;
-            break;
-        }
-    }
-    
+    //keyboard->getEvent(*window);
+    delete mouse;
+    delete keyboard;
     return input;
 }
 
-void render(sf::RenderWindow &window, sf::View &view, sf::Sprite &fondo){
-    window.clear();
-    window.setView(view);
+void render(Window *window, View *view, Sprite *fondo){
+    window->clear();
+    window->setView(view);
     //Dibujar objetos
-    window.draw(fondo);
+    window->draw(fondo);
     //---------------
-    window.display();
+    window->display();
 }
 
 int main(int argc, char** argv) {
-    sf::RenderWindow window(sf::VideoMode(800, 600), "Entregable - Scrolling", sf::Style::Titlebar | sf::Style::Close);
-    //Window win = new Window();
+    Window *window = new Window(800, 600, "Entregable - Scrolling");
     //Texturas
-    sf::Texture texFondo;
-    if(!texFondo.loadFromFile("resources/map.png")){
-        std::cerr << "Error cargando la imagen map.png";
-        exit(0);
-    }
-    sf::Sprite fondo(texFondo);
-    fondo.setTextureRect(sf::IntRect(0, 0, 832/2, 832/2));
+    Texture *texFondo = new Texture("resources/map.png");
+    Sprite *fondo = new Sprite(texFondo);
+    fondo->setTextureRect(0, 0, 832, 832);
     //View
-    sf::View view;
-    view.setCenter(sf::Vector2f(350, 300));
-    view.setSize(sf::Vector2f(400, 300)); //Tamano de la window entre 2
+    View *view = new View(350, 300, 400, 300);
     //Fisicas
-    sf::Clock clock;
+    Clock *clock = new Clock();
     
-    while(window.isOpen()){
-        
+    while(window->isOpen()){
         //Update
-        if(clock.getElapsedTime().asSeconds() > kUpdateTimePS){
-            sf::Event event;
-            int input = getInput(window, event, view);
-            //std::cout<<ItoS(input);
-            updateGameState(input, clock.getElapsedTime().asSeconds(), view);
-            clock.restart();
+        float time = clock->getElapsedTimeAsSeconds();
+        if(time > kUpdateTimePS){
+            window->checkEnd(); //Para cerrar la ventana
+            int input = getInput(window, view);
+            updateGameState(input, time, view);
+            clock->restartAsSeconds();
         }
         //Render
         render(window, view, fondo);
     }
+    delete view;
+    delete fondo;
+    delete texFondo;
+    delete window;
+    delete clock;
     return 0;
 }
-

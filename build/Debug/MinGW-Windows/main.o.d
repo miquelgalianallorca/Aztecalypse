@@ -1,4 +1,4 @@
-build/Debug/MinGW-Windows/main.o: main.cpp \
+build/Debug/MinGW-Windows/main.o: main.cpp SFML.h \
  ../../../../../SFML-2.1/include/SFML/Graphics.hpp \
  ../../../../../SFML-2.1/include/SFML/Window.hpp \
  ../../../../../SFML-2.1/include/SFML/System.hpp \
@@ -63,6 +63,8 @@ build/Debug/MinGW-Windows/main.o: main.cpp \
  ../../../../../SFML-2.1/include/SFML/Graphics/ConvexShape.hpp \
  ../../../../../SFML-2.1/include/SFML/Graphics/Sprite.hpp \
  ../../../../../SFML-2.1/include/SFML/Graphics/Text.hpp
+
+SFML.h:
 
 ../../../../../SFML-2.1/include/SFML/Graphics.hpp:
 

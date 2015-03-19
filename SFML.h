@@ -5,28 +5,30 @@
 
 class View {
 private: //Atributos
-    sf::View view;
+    sf::View* view;
 public:  //Metodos
     View(int centerX, int centerY, int sizeX, int sizeY);
-    void move(int moveX, int moveY);
-    sf::View getView();
+    void move(float moveX, float moveY);
+    sf::View* getView();
+    float getSizeX();
+    float getSizeY();
 };
 
 class Texture{
 private:
-    sf::Texture texture;
+    sf::Texture* texture;
 public:
-    Texture(char* filename);
-    sf::Texture getTexture();
+    Texture(std::string filename);
+    sf::Texture* getTexture();
 };
 
 class Sprite{
 private:
-    sf::Sprite sprite;
+    sf::Sprite* sprite;
 public:
-    Sprite(Texture texture);
+    Sprite(Texture *texture);
     void setTextureRect(int x0, int y0, int xCenter, int yCenter);
-    sf::Sprite getSprite();
+    sf::Sprite* getSprite();
 };
 
 class Window{
@@ -35,11 +37,15 @@ private:
 public:
     Window(int sizeX, int sizeY, std::string nombre);
     bool isOpen();
+    void close();
     void clear();
-    void draw(Sprite sprite);
+    void draw(Sprite* sprite);
+    void draw(sf::CircleShape shape);
     void display();
-    void setView(View view);
+    void setView(View* view);
     sf::RenderWindow* getWindow();
+    bool checkEnd();
+    bool pollEvent(sf::Event event);
 };
 
 class Clock{
@@ -57,7 +63,9 @@ private:
     int posY;
 public:
     Mouse();
-    void getPosition(Window window);
+    void getPosition(Window* window);
+    int getX();
+    int getY();
 };
 
 class Keyboard{
