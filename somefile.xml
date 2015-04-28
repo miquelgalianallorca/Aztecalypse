@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nivel nexoX="20" nexoY="4" img="resources/mapaNivel1.jpg">
+	<factoria posX="1" posY="5">
+	
+	</factoria>
+
+    <dificultad dif="facil">
+        <ronda num="1" delay="1">
+            <enemigo tipo="tanque" factoria="0"></enemigo>
+            <enemigo tipo="tanque" factoria="0"></enemigo>
+            <enemigo tipo="tanque" factoria="0"></enemigo>
+            <enemigo tipo="tanque" factoria="0"></enemigo>
+            <enemigo tipo="tanque" factoria="0"></enemigo>
+            <enemigo tipo="tanque" factoria="0"></enemigo>
+            <enemigo tipo="tanque" factoria="0"></enemigo>
+            <enemigo tipo="tanque" factoria="0"></enemigo>
+            <enemigo tipo="tanque" factoria="0"></enemigo>
+            <enemigo tipo="tanque" factoria="0"></enemigo>
+            <enemigo tipo="tanque" factoria="0"></enemigo>
+            <enemigo tipo="tanque" factoria="0"></enemigo>
+            <enemigo tipo="tanque" factoria="0"></enemigo>
+            <enemigo tipo="tanque" factoria="0"></enemigo>
+            <enemigo tipo="tanque" factoria="0"></enemigo>
+            <enemigo tipo="tanque" factoria="0"></enemigo>
+            <enemigo tipo="tanque" factoria="0"></enemigo>
+            <enemigo tipo="tanque" factoria="0"></enemigo>
+            <enemigo tipo="tanque" factoria="0"></enemigo>
+            <enemigo tipo="tanque" factoria="0"></enemigo>
+            <enemigo tipo="tanque" factoria="0"></enemigo>
+            <enemigo tipo="tanque" factoria="0"></enemigo>
+            <enemigo tipo="tanque" factoria="0"></enemigo>
+            <enemigo tipo="tanque" factoria="0"></enemigo>
+            <enemigo tipo="tanque" factoria="0"></enemigo>
+            <enemigo tipo="tanque" factoria="0"></enemigo>
+            <enemigo tipo="tanque" factoria="0"></enemigo>
+            <enemigo tipo="tanque" factoria="0"></enemigo>
+            <enemigo tipo="tanque" factoria="0"></enemigo>
+            <enemigo tipo="tanque" factoria="0"></enemigo>
+            <enemigo tipo="tanque" factoria="0"></enemigo>
+            <enemigo tipo="tanque" factoria="0"></enemigo>
+            <enemigo tipo="tanque" factoria="0"></enemigo>
+            <enemigo tipo="tanque" factoria="0"></enemigo>
+            <enemigo tipo="tanque" factoria="0"></enemigo>
+            <enemigo tipo="tanque" factoria="0"></enemigo>
+            <enemigo tipo="tanque" factoria="0"></enemigo>
+            <enemigo tipo="tanque" factoria="0"></enemigo>
+            <enemigo tipo="tanque" factoria="0"></enemigo>
+        </ronda>
+        <ronda num="2" delay="3">
+            <enemigo tipo="normal" factoria="0"></enemigo>
+            <enemigo tipo="normal" factoria="0"></enemigo>
+            <enemigo tipo="normal" factoria="0"></enemigo>
+            <enemigo tipo="rapido" factoria="0"></enemigo>
+            <enemigo tipo="rapido" factoria="0"></enemigo>
+        </ronda>
+    </dificultad>
+	
+	<dificultad dif="normal">
+        <ronda num="1" delay="3">
+            <enemigo tipo="normal" factoria="0"></enemigo>
+            <enemigo tipo="normal" factoria="0"></enemigo>
+            <enemigo tipo="normal" factoria="0"></enemigo>
+            <enemigo tipo="rapido" factoria="0"></enemigo>
+            <enemigo tipo="normal" factoria="0"></enemigo>
+        </ronda>
+        <ronda num="2" delay="3">
+            <enemigo tipo="normal" factoria="0"></enemigo>
+            <enemigo tipo="normal" factoria="0"></enemigo>
+            <enemigo tipo="normal" factoria="0"></enemigo>
+            <enemigo tipo="normal" factoria="0"></enemigo>
+            <enemigo tipo="normal" factoria="0"></enemigo>
+        </ronda>
+    </dificultad>
+	
+	<dificultad dif="dificil">
+        <ronda num="1" delay="3">
+            <enemigo tipo="normal" factoria="0"></enemigo>
+            <enemigo tipo="normal" factoria="0"></enemigo>
+            <enemigo tipo="normal" factoria="0"></enemigo>
+            <enemigo tipo="normal" factoria="0"></enemigo>
+            <enemigo tipo="normal" factoria="0"></enemigo>
+        </ronda>
+        <ronda num="2" delay="2">
+            <enemigo tipo="normal" factoria="0"></enemigo>
+            <enemigo tipo="normal" factoria="0"></enemigo>
+            <enemigo tipo="normal" factoria="0"></enemigo>
+            <enemigo tipo="normal" factoria="0"></enemigo>
+            <enemigo tipo="normal" factoria="0"></enemigo>
+        </ronda>
+		<ronda num="3" delay="2">
+            <enemigo tipo="normal" factoria="0"></enemigo>
+            <enemigo tipo="normal" factoria="0"></enemigo>
+            <enemigo tipo="normal" factoria="0"></enemigo>
+            <enemigo tipo="normal" factoria="0"></enemigo>
+            <enemigo tipo="normal" factoria="0"></enemigo>
+        </ronda>
+    </dificultad>
+</nivel>

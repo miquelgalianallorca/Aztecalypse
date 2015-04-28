@@ -7,9 +7,14 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Usuario/Documents/NetBeansProjects/entregable/SFML.cpp</file>
-            <file>file:/C:/Users/Usuario/Documents/NetBeansProjects/entregable/SFML.h</file>
-            <file>file:/C:/Users/Usuario/Documents/NetBeansProjects/entregable/main.cpp</file>
+            <file>file:/C:/Users/Usuario/Documents/NetBeansProjects/practica0/cpps/State_Menu.cpp</file>
+            <file>file:/C:/Users/Usuario/Documents/NetBeansProjects/practica0/cpps/main.cpp</file>
+            <file>file:/C:/Users/Usuario/Documents/NetBeansProjects/practica0/cpps/Game.cpp</file>
+            <file>file:/C:/Users/Usuario/Documents/NetBeansProjects/practica0/cpps/Nivel.cpp</file>
+            <file>file:/C:/Users/Usuario/Documents/NetBeansProjects/practica0/headers/SFML.h</file>
+            <file>file:/C:/Users/Usuario/Documents/NetBeansProjects/practica0/headers/Nivel.h</file>
+            <file>file:/C:/Users/Usuario/Documents/NetBeansProjects/practica0/cpps/SFML.cpp</file>
+            <file>file:/C:/Users/Usuario/Documents/NetBeansProjects/practica0/cpps/State_Game.cpp</file>
         </group>
     </open-files>
 </project-private>

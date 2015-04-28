@@ -35,8 +35,29 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
-	${OBJECTDIR}/SFML.o \
-	${OBJECTDIR}/main.o
+	${OBJECTDIR}/cpps/BinaryHeap.o \
+	${OBJECTDIR}/cpps/BinaryHeapCell.o \
+	${OBJECTDIR}/cpps/Boton.o \
+	${OBJECTDIR}/cpps/Camino.o \
+	${OBJECTDIR}/cpps/Celda.o \
+	${OBJECTDIR}/cpps/Efecto.o \
+	${OBJECTDIR}/cpps/Enemigo.o \
+	${OBJECTDIR}/cpps/FactoriaEnemigo.o \
+	${OBJECTDIR}/cpps/Game.o \
+	${OBJECTDIR}/cpps/GameState.o \
+	${OBJECTDIR}/cpps/Interpolacion.o \
+	${OBJECTDIR}/cpps/Mapa.o \
+	${OBJECTDIR}/cpps/Nexo.o \
+	${OBJECTDIR}/cpps/Nivel.o \
+	${OBJECTDIR}/cpps/ResourceManager.o \
+	${OBJECTDIR}/cpps/SFML.o \
+	${OBJECTDIR}/cpps/State.o \
+	${OBJECTDIR}/cpps/State_ChooseStage.o \
+	${OBJECTDIR}/cpps/State_Game.o \
+	${OBJECTDIR}/cpps/State_Menu.o \
+	${OBJECTDIR}/cpps/Torreta.o \
+	${OBJECTDIR}/cpps/config.o \
+	${OBJECTDIR}/cpps/main.o
 
 
 # C Compiler Flags
@@ -57,21 +78,126 @@ LDLIBSOPTIONS=
 
 # Build Targets
 .build-conf: ${BUILD_SUBPROJECTS}
-	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/entregable.exe
+	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/practica0.exe
 
-${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/entregable.exe: ${OBJECTFILES}
+${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/practica0.exe: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
-	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/entregable ${OBJECTFILES} ${LDLIBSOPTIONS}
+	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/practica0 ${OBJECTFILES} ${LDLIBSOPTIONS}
 
-${OBJECTDIR}/SFML.o: SFML.cpp 
-	${MKDIR} -p ${OBJECTDIR}
+${OBJECTDIR}/cpps/BinaryHeap.o: cpps/BinaryHeap.cpp 
+	${MKDIR} -p ${OBJECTDIR}/cpps
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/SFML.o SFML.cpp
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/cpps/BinaryHeap.o cpps/BinaryHeap.cpp
 
-${OBJECTDIR}/main.o: main.cpp 
-	${MKDIR} -p ${OBJECTDIR}
+${OBJECTDIR}/cpps/BinaryHeapCell.o: cpps/BinaryHeapCell.cpp 
+	${MKDIR} -p ${OBJECTDIR}/cpps
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main.o main.cpp
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/cpps/BinaryHeapCell.o cpps/BinaryHeapCell.cpp
+
+${OBJECTDIR}/cpps/Boton.o: cpps/Boton.cpp 
+	${MKDIR} -p ${OBJECTDIR}/cpps
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/cpps/Boton.o cpps/Boton.cpp
+
+${OBJECTDIR}/cpps/Camino.o: cpps/Camino.cpp 
+	${MKDIR} -p ${OBJECTDIR}/cpps
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/cpps/Camino.o cpps/Camino.cpp
+
+${OBJECTDIR}/cpps/Celda.o: cpps/Celda.cpp 
+	${MKDIR} -p ${OBJECTDIR}/cpps
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/cpps/Celda.o cpps/Celda.cpp
+
+${OBJECTDIR}/cpps/Efecto.o: cpps/Efecto.cpp 
+	${MKDIR} -p ${OBJECTDIR}/cpps
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/cpps/Efecto.o cpps/Efecto.cpp
+
+${OBJECTDIR}/cpps/Enemigo.o: cpps/Enemigo.cpp 
+	${MKDIR} -p ${OBJECTDIR}/cpps
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/cpps/Enemigo.o cpps/Enemigo.cpp
+
+${OBJECTDIR}/cpps/FactoriaEnemigo.o: cpps/FactoriaEnemigo.cpp 
+	${MKDIR} -p ${OBJECTDIR}/cpps
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/cpps/FactoriaEnemigo.o cpps/FactoriaEnemigo.cpp
+
+${OBJECTDIR}/cpps/Game.o: cpps/Game.cpp 
+	${MKDIR} -p ${OBJECTDIR}/cpps
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/cpps/Game.o cpps/Game.cpp
+
+${OBJECTDIR}/cpps/GameState.o: cpps/GameState.cpp 
+	${MKDIR} -p ${OBJECTDIR}/cpps
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/cpps/GameState.o cpps/GameState.cpp
+
+${OBJECTDIR}/cpps/Interpolacion.o: cpps/Interpolacion.cpp 
+	${MKDIR} -p ${OBJECTDIR}/cpps
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/cpps/Interpolacion.o cpps/Interpolacion.cpp
+
+${OBJECTDIR}/cpps/Mapa.o: cpps/Mapa.cpp 
+	${MKDIR} -p ${OBJECTDIR}/cpps
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/cpps/Mapa.o cpps/Mapa.cpp
+
+${OBJECTDIR}/cpps/Nexo.o: cpps/Nexo.cpp 
+	${MKDIR} -p ${OBJECTDIR}/cpps
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/cpps/Nexo.o cpps/Nexo.cpp
+
+${OBJECTDIR}/cpps/Nivel.o: cpps/Nivel.cpp 
+	${MKDIR} -p ${OBJECTDIR}/cpps
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/cpps/Nivel.o cpps/Nivel.cpp
+
+${OBJECTDIR}/cpps/ResourceManager.o: cpps/ResourceManager.cpp 
+	${MKDIR} -p ${OBJECTDIR}/cpps
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/cpps/ResourceManager.o cpps/ResourceManager.cpp
+
+${OBJECTDIR}/cpps/SFML.o: cpps/SFML.cpp 
+	${MKDIR} -p ${OBJECTDIR}/cpps
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/cpps/SFML.o cpps/SFML.cpp
+
+${OBJECTDIR}/cpps/State.o: cpps/State.cpp 
+	${MKDIR} -p ${OBJECTDIR}/cpps
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/cpps/State.o cpps/State.cpp
+
+${OBJECTDIR}/cpps/State_ChooseStage.o: cpps/State_ChooseStage.cpp 
+	${MKDIR} -p ${OBJECTDIR}/cpps
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/cpps/State_ChooseStage.o cpps/State_ChooseStage.cpp
+
+${OBJECTDIR}/cpps/State_Game.o: cpps/State_Game.cpp 
+	${MKDIR} -p ${OBJECTDIR}/cpps
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/cpps/State_Game.o cpps/State_Game.cpp
+
+${OBJECTDIR}/cpps/State_Menu.o: cpps/State_Menu.cpp 
+	${MKDIR} -p ${OBJECTDIR}/cpps
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/cpps/State_Menu.o cpps/State_Menu.cpp
+
+${OBJECTDIR}/cpps/Torreta.o: cpps/Torreta.cpp 
+	${MKDIR} -p ${OBJECTDIR}/cpps
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/cpps/Torreta.o cpps/Torreta.cpp
+
+${OBJECTDIR}/cpps/config.o: cpps/config.cpp 
+	${MKDIR} -p ${OBJECTDIR}/cpps
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/cpps/config.o cpps/config.cpp
+
+${OBJECTDIR}/cpps/main.o: cpps/main.cpp 
+	${MKDIR} -p ${OBJECTDIR}/cpps
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/cpps/main.o cpps/main.cpp
 
 # Subprojects
 .build-subprojects:
@@ -79,7 +205,7 @@ ${OBJECTDIR}/main.o: main.cpp
 # Clean Targets
 .clean-conf: ${CLEAN_SUBPROJECTS}
 	${RM} -r ${CND_BUILDDIR}/${CND_CONF}
-	${RM} ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/entregable.exe
+	${RM} ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/practica0.exe
 
 # Subprojects
 .clean-subprojects:

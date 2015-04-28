@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<fonts>
+		<resource id="opensans">resources/opensansbold.ttf</resource>
+	</fonts>
+	<textures>
+		<resource id="soldado">resources/normal.png</resource>
+	</textures>
+	<sounds>
+	</sounds>
+</resources>

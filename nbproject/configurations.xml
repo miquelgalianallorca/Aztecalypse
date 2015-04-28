@@ -4,7 +4,29 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
-      <itemPath>SFML.h</itemPath>
+      <itemPath>headers/BinaryHeap.h</itemPath>
+      <itemPath>headers/BinaryHeapCell.h</itemPath>
+      <itemPath>headers/Boton.h</itemPath>
+      <itemPath>headers/Camino.h</itemPath>
+      <itemPath>headers/Celda.h</itemPath>
+      <itemPath>headers/Efecto.h</itemPath>
+      <itemPath>headers/Enemigo.h</itemPath>
+      <itemPath>headers/FactoriaEnemigo.h</itemPath>
+      <itemPath>headers/Game.h</itemPath>
+      <itemPath>headers/GameState.h</itemPath>
+      <itemPath>headers/Interpolacion.h</itemPath>
+      <itemPath>headers/Mapa.h</itemPath>
+      <itemPath>headers/Nexo.h</itemPath>
+      <itemPath>headers/Nivel.h</itemPath>
+      <itemPath>headers/ResourceManager.h</itemPath>
+      <itemPath>headers/SFML.h</itemPath>
+      <itemPath>headers/State.h</itemPath>
+      <itemPath>headers/State_ChooseStage.h</itemPath>
+      <itemPath>headers/State_Game.h</itemPath>
+      <itemPath>headers/State_Menu.h</itemPath>
+      <itemPath>headers/Torreta.h</itemPath>
+      <itemPath>headers/Valuable.h</itemPath>
+      <itemPath>headers/config.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
                    displayName="Resource Files"
@@ -13,8 +35,29 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
-      <itemPath>SFML.cpp</itemPath>
-      <itemPath>main.cpp</itemPath>
+      <itemPath>cpps/BinaryHeap.cpp</itemPath>
+      <itemPath>cpps/BinaryHeapCell.cpp</itemPath>
+      <itemPath>cpps/Boton.cpp</itemPath>
+      <itemPath>cpps/Camino.cpp</itemPath>
+      <itemPath>cpps/Celda.cpp</itemPath>
+      <itemPath>cpps/Efecto.cpp</itemPath>
+      <itemPath>cpps/Enemigo.cpp</itemPath>
+      <itemPath>cpps/FactoriaEnemigo.cpp</itemPath>
+      <itemPath>cpps/Game.cpp</itemPath>
+      <itemPath>cpps/GameState.cpp</itemPath>
+      <itemPath>cpps/Interpolacion.cpp</itemPath>
+      <itemPath>cpps/Mapa.cpp</itemPath>
+      <itemPath>cpps/Nexo.cpp</itemPath>
+      <itemPath>cpps/Nivel.cpp</itemPath>
+      <itemPath>cpps/ResourceManager.cpp</itemPath>
+      <itemPath>cpps/SFML.cpp</itemPath>
+      <itemPath>cpps/State.cpp</itemPath>
+      <itemPath>cpps/State_ChooseStage.cpp</itemPath>
+      <itemPath>cpps/State_Game.cpp</itemPath>
+      <itemPath>cpps/State_Menu.cpp</itemPath>
+      <itemPath>cpps/Torreta.cpp</itemPath>
+      <itemPath>cpps/config.cpp</itemPath>
+      <itemPath>cpps/main.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
                    displayName="Test Files"
@@ -28,6 +71,9 @@
       <itemPath>Makefile</itemPath>
     </logicalFolder>
   </logicalFolder>
+  <sourceRootList>
+    <Elem>headers</Elem>
+  </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
     <conf name="Debug" type="1">
@@ -47,17 +93,115 @@
             <pElem>../../../../../SFML-2.1/lib</pElem>
           </linkerAddLib>
           <linkerLibItems>
-            <linkerLibLibItem>sfml-graphics-d</linkerLibLibItem>
-            <linkerLibLibItem>sfml-window-d</linkerLibLibItem>
-            <linkerLibLibItem>sfml-system-d</linkerLibLibItem>
+            <linkerLibFileItem>../../../../../SFML-2.1/lib/libsfml-graphics-d.a</linkerLibFileItem>
+            <linkerLibFileItem>../../../../../SFML-2.1/lib/libsfml-window-d.a</linkerLibFileItem>
+            <linkerLibFileItem>../../../../../SFML-2.1/lib/libsfml-system-d.a</linkerLibFileItem>
+            <linkerLibFileItem>cpps/libsndfile-1.dll</linkerLibFileItem>
+            <linkerLibFileItem>cpps/openal32.dll</linkerLibFileItem>
+            <linkerLibFileItem>cpps/sfml-audio-2.dll</linkerLibFileItem>
+            <linkerLibFileItem>cpps/sfml-audio-d-2.dll</linkerLibFileItem>
+            <linkerLibFileItem>cpps/sfml-graphics-2.dll</linkerLibFileItem>
+            <linkerLibFileItem>cpps/sfml-graphics-d-2.dll</linkerLibFileItem>
+            <linkerLibFileItem>cpps/sfml-network-2.dll</linkerLibFileItem>
+            <linkerLibFileItem>cpps/sfml-network-d-2.dll</linkerLibFileItem>
+            <linkerLibFileItem>cpps/sfml-system-2.dll</linkerLibFileItem>
+            <linkerLibFileItem>cpps/sfml-system-d-2.dll</linkerLibFileItem>
+            <linkerLibFileItem>cpps/sfml-window-2.dll</linkerLibFileItem>
+            <linkerLibFileItem>cpps/sfml-window-d-2.dll</linkerLibFileItem>
           </linkerLibItems>
         </linkerTool>
       </compileType>
-      <item path="SFML.cpp" ex="false" tool="1" flavor2="0">
+      <item path="cpps/BinaryHeap.cpp" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="SFML.h" ex="false" tool="3" flavor2="0">
+      <item path="cpps/BinaryHeapCell.cpp" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="main.cpp" ex="false" tool="1" flavor2="0">
+      <item path="cpps/Boton.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="cpps/Camino.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="cpps/Celda.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="cpps/Efecto.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="cpps/Enemigo.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="cpps/FactoriaEnemigo.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="cpps/Game.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="cpps/GameState.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="cpps/Interpolacion.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="cpps/Mapa.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="cpps/Nexo.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="cpps/Nivel.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="cpps/ResourceManager.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="cpps/SFML.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="cpps/State.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="cpps/State_ChooseStage.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="cpps/State_Game.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="cpps/State_Menu.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="cpps/Torreta.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="cpps/config.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="cpps/main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="headers/BinaryHeap.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="headers/BinaryHeapCell.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="headers/Boton.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="headers/Camino.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="headers/Celda.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="headers/Efecto.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="headers/Enemigo.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="headers/FactoriaEnemigo.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="headers/Game.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="headers/GameState.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="headers/Interpolacion.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="headers/Mapa.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="headers/Nexo.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="headers/Nivel.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="headers/ResourceManager.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="headers/SFML.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="headers/State.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="headers/State_ChooseStage.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="headers/State_Game.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="headers/State_Menu.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="headers/Torreta.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="headers/Valuable.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="headers/config.h" ex="false" tool="3" flavor2="0">
       </item>
     </conf>
     <conf name="Release" type="1">
@@ -80,11 +224,97 @@
           <developmentMode>5</developmentMode>
         </asmTool>
       </compileType>
-      <item path="SFML.cpp" ex="false" tool="1" flavor2="0">
+      <item path="cpps/BinaryHeap.cpp" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="SFML.h" ex="false" tool="3" flavor2="0">
+      <item path="cpps/BinaryHeapCell.cpp" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="main.cpp" ex="false" tool="1" flavor2="0">
+      <item path="cpps/Boton.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="cpps/Camino.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="cpps/Celda.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="cpps/Efecto.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="cpps/Enemigo.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="cpps/FactoriaEnemigo.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="cpps/Game.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="cpps/GameState.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="cpps/Interpolacion.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="cpps/Mapa.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="cpps/Nexo.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="cpps/Nivel.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="cpps/ResourceManager.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="cpps/SFML.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="cpps/State.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="cpps/State_ChooseStage.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="cpps/State_Game.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="cpps/State_Menu.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="cpps/Torreta.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="cpps/config.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="cpps/main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="headers/BinaryHeap.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="headers/BinaryHeapCell.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="headers/Boton.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="headers/Camino.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="headers/Celda.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="headers/Efecto.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="headers/Enemigo.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="headers/FactoriaEnemigo.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="headers/Game.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="headers/GameState.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="headers/Interpolacion.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="headers/Mapa.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="headers/Nexo.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="headers/Nivel.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="headers/ResourceManager.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="headers/SFML.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="headers/State.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="headers/State_ChooseStage.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="headers/State_Game.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="headers/State_Menu.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="headers/Torreta.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="headers/Valuable.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="headers/config.h" ex="false" tool="3" flavor2="0">
       </item>
     </conf>
   </confs>
